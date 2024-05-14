@@ -27,7 +27,7 @@
                         <div class="relative flex items-center gap-6 lg:items-end">
                             <div class="flex items-start gap-6 lg:flex-col">
                                 <div class="pt-3 sm:pt-5 lg:pt-0">
-                                    <h1 class="text-4xl font-semibold text-white">¡Bienvenidos al Code Challenge!</h1>
+                                <h1 class="text-4xl font-semibold text-black mt-6">¡Bienvenidos al Code Challenge!</h1>
                                     <h2 class="text-3xl font-semibold text-black mt-6">Puedes seguir los siguientes pasos para completar la navegación:</h2>
                                     <ol class="list-decimal pl-8 mt-4 text-2xl">
                                         <li>Crear una cuenta con correo y contraseña (He agregado esta funcionalidad para que tus notas sean personales) 😊.</li>
