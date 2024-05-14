@@ -6,28 +6,28 @@
 
         <x-validation-errors class="mb-4" />
 
-        @session('status')
+        @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
-                {{ $value }}
+                {{ session('status') }}
             </div>
-        @endsession
+        @endif
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
                 <x-label for="email" value="{{ __('Correo') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-input id="email" class="block mt-1 w-full focus:bg-[#2B70FA] focus:text-white" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Contraseña') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-full focus:bg-[#2B70FA] focus:text-white" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
+                    <input type="checkbox" id="remember_me" name="remember" class="form-checkbox h-5 w-5 text-[#2B70FA] transition duration-150 ease-in-out">
                     <span class="ms-2 text-sm text-gray-600">{{ __('Recordar Login') }}</span>
                 </label>
             </div>
@@ -39,7 +39,7 @@
                     </a>
                 @endif
 
-                <x-button class="ms-4">
+                <x-button class="ms-4 bg-[#2B70FA] hover:bg-[#1a56c2] focus:ring-[#2B70FA] !important">
                     {{ __('Log in') }}
                 </x-button>
             </div>

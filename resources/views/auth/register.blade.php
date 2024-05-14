@@ -51,7 +51,7 @@
                     {{ __('Ya tienes alguna cuenta?') }}
                 </a>
 
-                <x-button class="ms-4">
+                <x-button class="ms-4 bg-[#2B70FA] hover:bg-[#1a56c2] focus:ring-[#2B70FA] !important">
                     {{ __('Registrarse') }}
                 </x-button>
             </div>

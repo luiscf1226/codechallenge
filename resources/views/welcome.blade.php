@@ -6,7 +6,7 @@
     <title>Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans antialiased bg-gradient-to-r from-blue-500 to-red-400">
+<body class="font-sans antialiased bg-gradient-to-r from-blue-700 to-red-500">
     <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
             <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
@@ -35,7 +35,7 @@
                                         <li class="mt-2">Espero que disfrutes de mi página del challenge!😁</li>
                                     </ol>
                                     <p class="mt-6 text-2xl">PD #1: He decidido utilizar Jetstream y Livewire con tailwindcss, espero no haya problemas 😄.</p>
-                                    <p class="mt-6 text-2xl">PD #2: He decidido intentado replicar los colores de pixel pay 😜.</p>
+                                    <p class="mt-6 text-2xl">PD #2: He decidido intentado replicar los colores de pixel pay para esta pagina principal 😜.</p>
                                 </div>
                             </div>
                         </div>
