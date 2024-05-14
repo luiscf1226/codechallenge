@@ -25,7 +25,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
+                <x-button class="ms-4 bg-[#2B70FA] hover:bg-[#1a56c2] focus:ring-[#2B70FA] !important">
                     {{ __('Enviar Correo electrónico') }}
                 </x-button>
             </div>
