@@ -65,6 +65,6 @@ class User extends Authenticatable
     //relación uno a muchos con quehaceres
     public function quehaceres()
     {
-        return $this->hasMany(Quehacer::class);
+        return $this->hasMany(quehaceres::class);
     }
 }
