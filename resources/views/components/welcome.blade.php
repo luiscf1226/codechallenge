@@ -5,9 +5,14 @@
     </h1>
 
     <p class="mt-6 text-gray-500 leading-relaxed">
-       En esta página podrás ver tus quehaceres y las tecnologías utilizadas en este proyecto.
-       Tendras las siguientes opciones:
-    </p>
+    En esta página podrás ver tus quehaceres y las tecnologías utilizadas en este proyecto. Tendrás las siguientes opciones:
+    <ol class="list-decimal pl-6 mt-2">
+        <li>1. Ver tus quehaceres para tu cuenta</li>
+        <li>2. Poner quehaceres como terminados o no terminados</li>
+        <li>3. Vaciar Lista</li>
+        <li>4. Eliminar quehaceres terminados</li>
+    </ol>
+</p>
 </div>
 
 <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
@@ -70,9 +75,14 @@
                 <a href="https://tailwindcss.com/">Tailwind</a>
             </h2>
         </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.
+        <p class="mt-6 text-gray-500 leading-relaxed">
+            En esta página podrás ver tus quehaceres y las tecnologías utilizadas en este proyecto. Tendrás las siguientes opciones:
+            <ol class="list-decimal pl-6 mt-2">
+                <li>Ver tus quehaceres para tu cuenta</li>
+                <li>Poner quehaceres como terminados o no terminados</li>
+                <li>Vaciar Lista</li>
+                <li>Eliminar quehaceres terminados</li>
+            </ol>
         </p>
     </div>
 
