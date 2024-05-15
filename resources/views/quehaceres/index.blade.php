@@ -7,9 +7,12 @@
 
     <div class="py-12">
         <div class="container">
-            <div class="mb-4">
+            <div class="mb-4 button-container">
                 <a href="{{route('quehaceres.create')}}" class="button blue">Crear Quehacer</a>
-                <button class="button yellow">Vaciar Lista</button>
+                <form action="{{ route('quehaceres.delete-all') }}" method="POST" onsubmit="return confirm('¿Está seguro de que desea vaciar la lista de quehaceres?');">
+                    @csrf
+                    <button type="submit" class="button yellow">Vaciar Lista</button>
+                </form>
                 <button class="button red">Eliminar Terminados</button>
             </div>
 
@@ -34,13 +37,12 @@
                             </td>
                         </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
+<!--- Se utilizo styles de css en duro debido a problemas en tailwind en los tres botones  --->
     <style>
         .button {
             padding: 10px 20px;
@@ -65,6 +67,16 @@
 
         .yellow:hover {
             background-color: #e0a800;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button-container form {
+            margin: 0;
         }
 
         .red {

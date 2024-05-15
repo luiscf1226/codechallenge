@@ -56,7 +56,7 @@ class QueHaceresController extends Controller
     {
         //
     }
-    //Marcar un quehacer como completado
+    //función para marcar como completado un quehacer
     public function complete(Request $request, $id)
     {
         $quehacer = QueHaceres::findOrFail($id);
@@ -85,7 +85,7 @@ class QueHaceresController extends Controller
     //Eliminar todos los quehaceres
     public function deleteAll()
     {
-        QueHaceres::truncate();
+        QueHaceres::query()->delete();
         return redirect()->route('quehaceres.index')->with('success', 'Todos los quehaceres han sido eliminados');
     }
 }
