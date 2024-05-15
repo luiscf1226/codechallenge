@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class quehaceres extends Model
 {
     use HasFactory;
-    protected $fillable = ['descripcion', 'completado'];
+    protected $fillable = ['descripcion', 'completado', 'user_id'];
     public function user()
     {
         return $this->belongsTo(User::class);

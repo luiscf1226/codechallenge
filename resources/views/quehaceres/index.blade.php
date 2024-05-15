@@ -5,6 +5,37 @@
         </h2>
     </x-slot>
 
+    <div class="py-12">
+        <div class="container">
+            <div class="mb-4">
+                <a href="{{route('quehaceres.create')}}" class="button blue">Crear Quehacer</a>
+                <button class="button yellow">Vaciar Lista</button>
+                <button class="button red">Eliminar Terminados</button>
+            </div>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Completado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($quehaceres as $quehacer)
+                            <tr>
+                                <td>{{ $quehacer->descripcion }}</td>
+                                <td>
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" {{ $quehacer->completado ? 'checked' : '' }}>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
     <style>
         .button {
             padding: 10px 20px;
@@ -68,34 +99,4 @@
         }
     </style>
 
-    <div class="py-12">
-        <div class="container">
-            <div class="mb-4">
-                <button class="button blue">Crear Quehacer</button>
-                <button class="button yellow">Vaciar Lista</button>
-                <button class="button red">Eliminar Terminados</button>
-            </div>
-
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Descripción</th>
-                            <th>Completado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($quehaceres as $quehacer)
-                            <tr>
-                                <td>{{ $quehacer->descripcion }}</td>
-                                <td>
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" {{ $quehacer->completado ? 'checked' : '' }}>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 </x-app-layout>

@@ -22,7 +22,8 @@ class QueHaceresController extends Controller
      */
     public function create()
     {
-        //
+        //Mostrar el formulario para crear un nuevo quehacer
+        return view('quehaceres.create');
     }
 
     /**
@@ -30,8 +31,15 @@ class QueHaceresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $quehacer = new QueHaceres();
+        $quehacer->descripcion = $request->descripcion;
+        $quehacer->completado = $request->completado;
+        $quehacer->user_id = auth()->id(); // Automatically set the user ID from the logged-in user
+        $quehacer->save();
+    
+        return redirect()->route('quehaceres.index')->with('success', 'Quehacer creado con éxito');
     }
+    
 
     /**
      * Display the specified resource.
