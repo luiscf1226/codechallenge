@@ -13,7 +13,11 @@
                     @csrf
                     <button type="submit" class="button yellow">Vaciar Lista</button>
                 </form>
-                <button class="button red">Eliminar Terminados</button>
+                <form action="{{ route('quehaceres.delete-completed') }}" method="POST" onsubmit="return confirm('¿Está seguro de que desea eliminar todos los quehaceres completados?');">
+                    @csrf
+                    <button type="submit" class="button red">Eliminar Terminados</button>
+                </form>
+
             </div>
 
             <div>
@@ -42,7 +46,7 @@
             </div>
         </div>
     </div>
-<!--- Se utilizo styles de css en duro debido a problemas en tailwind en los tres botones  --->
+    <!--- Se utilizo styles de css en duro debido a problemas en tailwind en los tres botones  --->
     <style>
         .button {
             padding: 10px 20px;

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\QueHaceres;
+use App\Models\quehaceres;
 use Illuminate\Http\Request;
 
 class QueHaceresController extends Controller
@@ -87,5 +87,11 @@ class QueHaceresController extends Controller
     {
         QueHaceres::query()->delete();
         return redirect()->route('quehaceres.index')->with('success', 'Todos los quehaceres han sido eliminados');
+    }
+    //Eliminar todos los quehaceres completados
+    public function deleteCompleted()
+    {
+        QueHaceres::where('completado', true)->delete();
+        return redirect()->route('quehaceres.index')->with('success', 'Todos los quehaceres completados han sido eliminados');
     }
 }

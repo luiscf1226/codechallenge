@@ -14,8 +14,10 @@
         <li>4. Eliminar quehaceres terminados</li>
     </ol>
     <br></br>
-    <h1 class="text-4xl font-semibold" >¡Para ver tus quehaceres hacle click a la ventana de quehaceres alado del dashboard!</h1>   
-    </p>
+    <h2 class="text-4xl font-semibold" >¡Para ver tus quehaceres hacle click a la ventana de quehaceres alado del dashboard!</h2>   
+    <br></br>
+    <h3 class="text-3xl font-semibold"> Tecnologías utilizadas:</h3>
+</p>
 </div>
 <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
     <div>

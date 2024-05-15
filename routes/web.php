@@ -17,9 +17,9 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('quehaceres', QueHaceresController::class);
-    Route::get('quehaceres', [QueHaceresController::class, 'index'])->name('quehaceres.index');
     //rutas extras para quehaceres eliminar todos y marcar como completado
+    //se utilizo post debido a fallas con el metodo delete
     Route::post('quehaceres/delete-all', [QueHaceresController::class, 'deleteAll'])->name('quehaceres.delete-all');
     Route::patch('quehaceres/{quehacer}/complete', [QueHaceresController::class, 'complete'])->name('quehaceres.complete');
-
+    Route::post('quehaceres/delete-completed', [QueHaceresController::class, 'deleteCompleted'])->name('quehaceres.delete-completed');
 });
