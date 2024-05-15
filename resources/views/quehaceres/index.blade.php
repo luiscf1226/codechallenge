@@ -23,19 +23,24 @@
                     </thead>
                     <tbody>
                         @foreach ($quehaceres as $quehacer)
-                            <tr>
-                                <td>{{ $quehacer->descripcion }}</td>
-                                <td>
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" {{ $quehacer->completado ? 'checked' : '' }}>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>{{ $quehacer->descripcion }}</td>
+                            <td>
+                                <form action="{{ route('quehaceres.complete', $quehacer->id) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" {{ $quehacer->completado ? 'checked' : '' }} onchange="this.form.submit()">
+                                </form>
+                            </td>
+                        </tr>
                         @endforeach
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    
+
     <style>
         .button {
             padding: 10px 20px;
@@ -76,7 +81,7 @@
             margin: 20px auto;
             padding: 20px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         table {
@@ -84,7 +89,8 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             text-align: left;
             padding: 12px;
             border-bottom: 1px solid #ccc;

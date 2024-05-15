@@ -36,10 +36,10 @@ class QueHaceresController extends Controller
         $quehacer->completado = $request->completado;
         $quehacer->user_id = auth()->id(); // Automatically set the user ID from the logged-in user
         $quehacer->save();
-    
+
         return redirect()->route('quehaceres.index')->with('success', 'Quehacer creado con éxito');
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -56,6 +56,16 @@ class QueHaceresController extends Controller
     {
         //
     }
+    //Marcar un quehacer como completado
+    public function complete(Request $request, $id)
+    {
+        $quehacer = QueHaceres::findOrFail($id);
+        $quehacer->completado = !$quehacer->completado;
+        $quehacer->save();
+
+        return back()->with('success', 'Quehacer updated successfully');
+    }
+
 
     /**
      * Update the specified resource in storage.
@@ -71,5 +81,11 @@ class QueHaceresController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    //Eliminar todos los quehaceres
+    public function deleteAll()
+    {
+        QueHaceres::truncate();
+        return redirect()->route('quehaceres.index')->with('success', 'Todos los quehaceres han sido eliminados');
     }
 }
